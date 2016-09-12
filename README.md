@@ -90,7 +90,4 @@ require('babel-core').transform('code', {
 
 ## Credits
 
-* Inspired by [babel-preset-es2015-node6](https://github.com/jhen0409/babel-preset-es2015-node6)
-    'transform-es2015-destructuring',
-    'transform-es2015-parameters',
-    ['transform-object-rest-spread', { useBuiltIns: true }],
+Inspired by [babel-preset-es2015-node6](https://github.com/jhen0409/babel-preset-es2015-node6)
