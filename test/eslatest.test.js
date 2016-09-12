@@ -3,3 +3,5 @@ require('babel-core/register')({
     ...require('../').plugins,
   ],
 })
+require('./es2016')
+require('./es2017')

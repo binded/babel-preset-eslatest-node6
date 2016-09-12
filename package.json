@@ -7,10 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "lint": "eslint index.js test/",
+    "lint": "eslint index.js test/*.test.js",
     "pretest": "npm run lint",
     "test": "npm run test:fast",
-    "test:fast": "node test/*.test.js",
+    "test:fast": "tape test/*.test.js",
     "test:watch": "nodemon --exec npm -- run --silent test:fast || true",
     "semantic-release": "git push && npm test && semantic-release pre && npm run build && npm publish && semantic-release post"
   },
@@ -41,6 +41,9 @@
   },
   "devDependencies": {
     "babel-core": "^6.14.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.9.0",
+    "babel-plugin-transform-es2015-parameters": "^6.11.4",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "blue-tape": "^1.0.0",
     "cz-conventional-changelog": "^1.2.0",
     "eslint-config-blockai": "^1.0.1",

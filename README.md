@@ -41,6 +41,27 @@ npm install --save-dev babel-preset-eslatest-node6
 }
 ```
 
+**Note**: if you are using [object rest/spread](https://babeljs.io/docs/plugins/transform-object-rest-spread/), you will need to add a few additional plugins to make it work:
+
+```sh
+npm install --save-dev \
+  babel-plugin-transform-es2015-destructuring \
+  babel-plugin-transform-es2015-parameters \
+  babel-plugin-transform-object-rest-spread
+```
+
+```json
+{
+  "presets": ["eslatest-node6"],
+  "plugins": [
+    "transform-es2015-destructuring",
+    "transform-es2015-parameters",
+    ["transform-object-rest-spread", { "useBuiltIns": true }]
+  ]
+}
+```
+
+
 ### Via CLI
 
 ```js
@@ -70,3 +91,6 @@ require('babel-core').transform('code', {
 ## Credits
 
 * Inspired by [babel-preset-es2015-node6](https://github.com/jhen0409/babel-preset-es2015-node6)
+    'transform-es2015-destructuring',
+    'transform-es2015-parameters',
+    ['transform-object-rest-spread', { useBuiltIns: true }],
