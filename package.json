@@ -1,18 +1,16 @@
 {
   "name": "babel-preset-eslatest-node6",
   "version": "1.0.0",
-  "description": "",
-  "main": "./lib/index.js",
+  "description": "Babel preset for the latest ECMAScript specification for Node v6",
+  "main": "./index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "npm run test:fast",
-    "build": "npm run clean && babel ./src --out-dir ./lib --copy-files",
-    "clean": "rimraf ./lib",
-    "lint": "eslint src/ test/",
+    "lint": "eslint index.js test/",
     "pretest": "npm run lint",
-    "test:fast": "babel-tape-runner test/*.test.js",
+    "test": "npm run test:fast",
+    "test:fast": "node test/*.test.js",
     "test:watch": "nodemon --exec npm -- run --silent test:fast || true",
     "semantic-release": "git push && npm test && semantic-release pre && npm run build && npm publish && semantic-release post"
   },
@@ -20,7 +18,18 @@
     "type": "git",
     "url": "git+https://github.com/blockai/babel-preset-eslatest-node6.git"
   },
-  "keywords": [],
+  "keywords": [
+    "babel",
+    "preset",
+    "es2015",
+    "es2016",
+    "es2017",
+    "es2018",
+    "es6",
+    "es7",
+    "es8",
+    "node"
+  ],
   "author": "Oli Lalonde <olalonde@gmail.com> (https://syskall.com)",
   "license": "MIT",
   "bugs": {
@@ -31,16 +40,11 @@
     "node": ">=6"
   },
   "devDependencies": {
-    "babel-cli": "^6.14.0",
-    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
-    "babel-plugin-transform-object-rest-spread": "^6.8.0",
-    "babel-preset-es2015-node6": "^0.3.0",
-    "babel-tape-runner": "^2.0.1",
+    "babel-core": "^6.14.0",
     "blue-tape": "^1.0.0",
     "cz-conventional-changelog": "^1.2.0",
     "eslint-config-blockai": "^1.0.1",
     "nodemon": "^1.10.2",
-    "rimraf": "^2.5.4",
     "semantic-release": "^4.3.5"
   },
   "release": {
@@ -53,5 +57,12 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "babel-plugin-syntax-trailing-function-commas": "^6.13.0",
+    "babel-plugin-transform-async-to-generator": "^6.8.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.14.0",
+    "babel-plugin-transform-exponentiation-operator": "^6.8.0",
+    "babel-plugin-transform-runtime": "^6.15.0"
   }
 }

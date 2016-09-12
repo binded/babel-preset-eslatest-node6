@@ -1,3 +1,6 @@
 {
-  "extends": "blockai"
+  "extends": "blockai",
+  "rules": {
+    "global-require": 0
+  }
 }

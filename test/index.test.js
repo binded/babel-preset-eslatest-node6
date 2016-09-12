@@ -1,7 +1,3 @@
-import test from 'blue-tape'
-import init from '../src'
-
-test('todo', (t) => {
-  t.ok(!!init)
-  t.end()
-})
+require('./setup')
+require('./es2016')
+require('./es2017')
