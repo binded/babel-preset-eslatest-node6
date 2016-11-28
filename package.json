@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-eslatest-node6",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Babel preset for the latest ECMAScript specification for Node v6",
   "main": "./index.js",
   "directories": {
@@ -41,9 +41,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.14.0",
-    "babel-plugin-transform-es2015-destructuring": "^6.9.0",
-    "babel-plugin-transform-es2015-parameters": "^6.11.4",
-    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-plugin-transform-object-rest-spread": "^6.19.0",
     "blue-tape": "^1.0.0",
     "cz-conventional-changelog": "^1.2.0",
     "eslint-config-blockai": "^1.0.1",
